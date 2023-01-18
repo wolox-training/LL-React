@@ -1,0 +1,32 @@
+@import 'colors';
+@mixin fontStyle {
+  color: $black;
+  font-family: Roboto;
+  font-weight: 700;
+}
+.title {
+  @include fontStyle();
+  line-height: 38px;
+  font-size: 32px;
+}
+.secondTitle {
+  @include fontStyle();
+  font-size: 20px;
+  line-height: 24px;
+}
+.gen {
+  color: $mediumGray;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.bookData{
+  color: $mediumGray;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+
+
