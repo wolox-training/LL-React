@@ -3,16 +3,19 @@
   color: $black;
   font-family: Roboto;
   font-weight: 700;
+  display: block; 
 }
-.title {
+.mainTitle {
   @include fontStyle();
   line-height: 38px;
   font-size: 32px;
+  margin-bottom: 50px
 }
-.secondTitle {
+.title {
   @include fontStyle();
   font-size: 20px;
   line-height: 24px;
+  margin-bottom: 30px;
 }
 .gen {
   color: $mediumGray;
@@ -21,12 +24,9 @@
   font-weight: 700;
   line-height: 28px;
 }
-.bookData{
+.bookDetail{
   color: $mediumGray;
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 20px; 
   line-height: 24px;
 }
-
-
-
