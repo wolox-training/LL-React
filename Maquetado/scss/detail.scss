@@ -4,7 +4,6 @@
   font-family: Roboto;
   font-weight: 700;
   display: block;
-  margin-top: 2%
 }
 .mainTitle {
   @include fontStyle();
@@ -34,7 +33,11 @@
 .bookImage {
   width: 250px;
   height: 360px;
-  float: left;
   margin-right: 2.5%;
   margin-left: 2%;
+}
+.bookContainer{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
 }
