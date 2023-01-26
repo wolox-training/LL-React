@@ -32,17 +32,18 @@
   line-height: 24px;
 }
 .bookImage {
+  position: relative;
   width: 250px;
   height: 385px;
   padding: 20px;
-}
-.bookBadge{
-  position: absolute;
-  width: 55px;
-  height: 85px;
-  transform: rotate(20deg);
-  margin-top: 8px;
-  left: 14.5%;
+  &::after{
+    position: absolute;
+    content: url('https://www.freeiconspng.com/thumbs/badge-icon-png/badge-icon-png-22.png');
+    width: 55px;
+    height: 85px;
+    transform: rotate(20deg);
+    margin-top: 8px;
+  }
 }
 .textContainer{
   width: 80%;
