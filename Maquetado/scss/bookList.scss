@@ -1,0 +1,30 @@
+.cardsContainer {
+  background-color: $seashell;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 90px;
+  width: 80%;
+  gap: 4%;
+  padding-bottom: 45px;
+  .bookCard {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    margin-top: 40px;
+    padding: 20px 30px 15px;
+    box-shadow: 4px 4px 9px -4px rgba($black, 1);
+    .titleBook {
+      color: $black;
+      font-weight: 700;
+      margin-top: 8px;
+      margin-bottom: 3px;
+    }
+    .authorBook {
+      color: $mediumGray;
+      }
+    }
+  }
+
