@@ -31,18 +31,24 @@
   font-size: 20px; 
   line-height: 24px;
 }
-.bookImage {
-  width: 250px;
-  height: 385px;
-  padding: 20px;
-}
-.bookBadge{
-  position: absolute;
-  width: 55px;
-  height: 85px;
-  transform: rotate(20deg);
-  margin-top: 8px;
-  left: 14.5%;
+.bookContainer {
+  img{
+    position: relative;
+    width: 250px;
+    height: 385px;
+    padding: 20px;
+  }
+  &::after{
+    content: '';
+    background: url('./resources/img/badge.png');
+    background-size: cover;
+    position: absolute;
+    width: 55px;
+    height: 80px;
+    margin-top: 8px;
+    left: 14.5%;
+    transform: rotate(20deg);
+  }
 }
 .textContainer{
   width: 80%;
