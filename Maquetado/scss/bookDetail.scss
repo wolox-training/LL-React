@@ -2,78 +2,80 @@
 
 @mixin fontStyle {
   color: $black;
+  display: block;
   font-family: Roboto;
   font-weight: 700;
-  display: block;
 }
 
 body {
-  background-color: $seashell;
 
-  .pageContainer {
+  .bookDetailBackground {
+    align-items: center;
+    background-color: $seashell;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
     gap: 15px;
+    padding-top: 25px;
+    padding-bottom: 28%;
 
-    .backButtonContainer{
+
+    .backButtonContainer {
       display: flex;
       flex-direction: row-reverse;
       margin-right: 80%;
-    
-    .backButton {
-      font-size: large;
+
+      .backButton {
+        font-size: large;
+      }
+
+      .backArrowImage {
+        margin-right: 10px;
+      }
     }
-    .backArrowImage {
-      margin-right: 10px;
-    }
-  }
 
     .bookContainer {
       display: flex;
       background-color: $white;
-      width: 65%;
       box-shadow: 4px 4px 9px -4px rgba($black, 1);
+      width: 65%;
 
       .bookImage {
-        position: relative;
-        width: 250px;
         height: 385px;
         padding: 20px;
+        position: relative;
+        width: 250px;
       }
 
       &::after {
         content: '';
         background: url('./resources/img/badge.png');
         background-size: cover;
-        position: absolute;
-        width: 55px;
         height: 80px;
-        margin-top: 6px;
         left: 30%;
+        margin-top: 6px;
+        position: absolute;
         transform: rotate(20deg);
+        width: 55px;
       }
 
       .textContainer {
+        padding: 20px;
         width: 80%;
-        padding: 20px
       }
 
       .mainTitle {
         @include fontStyle();
-        line-height: 38px;
-        font-size: 32px;
-        margin-bottom: 35px;
         border-bottom: 4px solid $conifer;
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 35px;
       }
 
       .title {
         @include fontStyle();
         font-size: 20px;
-        line-height: 24px;
         margin-bottom: 30px;
+        line-height: 24px;
       }
 
       .bookGenre {

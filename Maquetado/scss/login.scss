@@ -1,0 +1,14 @@
+body {
+  .pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loginContainer {
+      position: relative;
+      width: 400px;
+      height: 500px;
+      background-color: green;
+    }
+  }
+}
