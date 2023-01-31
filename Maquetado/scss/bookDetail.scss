@@ -1,62 +1,95 @@
 @import 'colors';
+
 @mixin fontStyle {
   color: $black;
   font-family: Roboto;
   font-weight: 700;
   display: block;
 }
-.mainTitle {
-  @include fontStyle();
-  line-height: 38px;
-  font-size: 32px;
-  margin-bottom: 35px;
-  border-bottom: 4px solid $conifer;
-}
-.title {
-  @include fontStyle();
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 30px;
-}
-.bookGenre {
-  color: $mediumGray;
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-}
-.bookDetail{
-  color: $mediumGray;
-  font-family: Roboto;
-  font-size: 20px; 
-  line-height: 24px;
-}
-.bookContainer {
-  img{
-    position: relative;
-    width: 250px;
-    height: 385px;
-    padding: 20px;
+
+body {
+  background-color: $seashell;
+
+  .pageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 15px;
+
+    .backButtonContainer{
+      display: flex;
+      flex-direction: row-reverse;
+      margin-right: 80%;
+    
+    .backButton {
+      font-size: large;
+    }
+    .backArrowImage {
+      margin-right: 10px;
+    }
   }
-  &::after{
-    content: '';
-    background: url('./resources/img/badge.png');
-    background-size: cover;
-    position: absolute;
-    width: 55px;
-    height: 80px;
-    margin-top: 8px;
-    left: 14.5%;
-    transform: rotate(20deg);
+
+    .bookContainer {
+      display: flex;
+      background-color: $white;
+      width: 65%;
+      box-shadow: 4px 4px 9px -4px rgba($black, 1);
+
+      .bookImage {
+        position: relative;
+        width: 250px;
+        height: 385px;
+        padding: 20px;
+      }
+
+      &::after {
+        content: '';
+        background: url('./resources/img/badge.png');
+        background-size: cover;
+        position: absolute;
+        width: 55px;
+        height: 80px;
+        margin-top: 6px;
+        left: 30%;
+        transform: rotate(20deg);
+      }
+
+      .textContainer {
+        width: 80%;
+        padding: 20px
+      }
+
+      .mainTitle {
+        @include fontStyle();
+        line-height: 38px;
+        font-size: 32px;
+        margin-bottom: 35px;
+        border-bottom: 4px solid $conifer;
+      }
+
+      .title {
+        @include fontStyle();
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+
+      .bookGenre {
+        color: $mediumGray;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+      }
+
+      .bookDetail {
+        color: $mediumGray;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
   }
-}
-.textContainer{
-  width: 80%;
-  padding: 20px
-}
-.bookContainer{
-  display: flex;
-  margin: 30px;
-  width: 65%;
-  box-shadow: 4px 4px 9px -4px rgba($black,1);
 }
