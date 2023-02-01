@@ -1,14 +1,83 @@
+@mixin flexBox {
+    align-items: center;
+    display: flex;
+    justify-content: center;  
+}
+@mixin buttonStyle {
+  border-radius: 5px;
+  height: 12%;
+}
+
 body {
   .pageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexBox();
 
     .loginContainer {
-      position: relative;
-      width: 400px;
+      align-items: center;
+      background-color: $seashell;
+      border-top: 10px solid $cerulean;
+      display: flex;
+      flex-direction: column;
       height: 500px;
-      background-color: green;
+      margin-top: 80px;
+      width: 400px;
+
+      .woloxLoginLogo {
+        margin-top: 10px;
+        height: 100px;
+        width: 300px;
+      }
+
+      .inputsContainer {
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        margin-top: 25px;
+        width: 85%;
+
+        .dataTitle {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+
+        .dataInput {
+          @include buttonStyle();
+          margin-bottom: 20px;
+        }
+
+        .loginButton {
+          @include flexBox();
+          @include buttonStyle();
+          background-color: $conifer;
+          margin-top: 10px;
+        }
+
+        .line {
+          background-color: $mediumGray;
+          margin-bottom: 10px;
+          margin-top: 20px;
+          height: 0.7%;
+        }
+
+        .signUpButton {
+          @include buttonStyle();
+          @include flexBox();
+          border-color: $conifer;
+          border-style: solid;
+          border-width: 4px;
+          margin-top: 10px;
+        }
+
+        .loginTitle {
+          color: $white;
+          font-size: 20px;
+        }
+
+        .signUpTitle {
+          color: $conifer;
+          font-size: 20px;
+        }
+      }
     }
   }
 }
