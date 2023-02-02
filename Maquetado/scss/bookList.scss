@@ -6,21 +6,25 @@
     border-top: 6px solid $cerulean;
     box-shadow: -0px 4px 9px -3px rgba($black, 2);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 8.5%;
+    justify-content: center;
     position: fixed;
     width: 100%;
 
-    .woloxLogoImage {
-      margin-left: 290px;
-      width: 225px;
-    }
+    .elementsContainer {
+      display: flex;
+      justify-content: space-between;
+      max-width: 60%;
+      width: 100%;
 
-    .logoutButton {
-      font-size: 18px;
-      font-weight: 500;
-      padding-right: 300px;
+      .woloxLogoImage {
+        width: 225px;
+      }
+  
+      .logoutButton {
+        font-size: 18px;
+        font-weight: 500;
+      }
     }
   }
 
