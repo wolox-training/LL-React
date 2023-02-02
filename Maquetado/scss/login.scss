@@ -1,15 +1,7 @@
-@mixin flexBox {
-    align-items: center;
-    display: flex;
-    justify-content: center;  
-}
-@mixin buttonStyle {
-  border-radius: 5px;
-  height: 12%;
-}
+@import 'colors';
+@import 'mixins';
 
-body {
-  .pageContainer {
+.pageContainer {
     @include flexBox();
 
     .loginContainer {
@@ -41,13 +33,13 @@ body {
         }
 
         .dataInput {
-          @include buttonStyle();
+          @include buttonsStyle;
           margin-bottom: 20px;
         }
 
         .loginButton {
           @include flexBox();
-          @include buttonStyle();
+          @include buttonsStyle;
           background-color: $conifer;
           margin-top: 10px;
         }
@@ -60,7 +52,7 @@ body {
         }
 
         .signUpButton {
-          @include buttonStyle();
+          @include buttonsStyle;
           @include flexBox();
           border-color: $conifer;
           border-style: solid;
@@ -80,4 +72,4 @@ body {
       }
     }
   }
-}
+

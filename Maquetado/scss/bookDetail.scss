@@ -1,15 +1,7 @@
 @import 'colors';
+@import 'mixins';
 
-@mixin fontStyle {
-  color: $black;
-  display: block;
-  font-family: Roboto;
-  font-weight: 700;
-}
-
-body {
-
-  .bookDetailBackground {
+.bookDetailBackground {
     align-items: center;
     background-color: $seashell;
     display: flex;
@@ -25,7 +17,7 @@ body {
       margin-right: 80%;
 
       .backButton {
-        font-size: large;
+        font-size: 18px;
       }
 
       .backArrowImage {
@@ -64,7 +56,7 @@ body {
       }
 
       .mainTitle {
-        @include fontStyle();
+        @include bookDetailfontStyle();
         border-bottom: 4px solid $conifer;
         font-size: 32px;
         line-height: 38px;
@@ -72,7 +64,7 @@ body {
       }
 
       .title {
-        @include fontStyle();
+        @include bookDetailfontStyle();
         font-size: 20px;
         margin-bottom: 30px;
         line-height: 24px;
@@ -94,4 +86,4 @@ body {
       }
     }
   }
-}
+
