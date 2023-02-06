@@ -99,8 +99,11 @@ $mobile: 1024px;
 @media only screen and (max-width: $mobile) {
   .bookDetailBackground {
     flex-direction: column-reverse;
+    justify-content: center;
 
-
+    .backButtonContainer {
+      position: unset;
+    }
     .bookContainer {
       align-items: center;
       flex-direction: column;
@@ -108,6 +111,7 @@ $mobile: 1024px;
       padding: unset;
       justify-content: flex-end;
       width: 40%;
+      padding-top: 20px;
 
       .bookImage {
         margin: 25px unset 20px unset;
