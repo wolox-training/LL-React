@@ -1,21 +1,22 @@
 @import 'colors';
 @import 'mixins';
 
+$mobile: 1024px;
+
 .bookDetailBackground {
   align-items: center;
   background-color: $seashell;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding-top: 25px;
-  padding-bottom: 28%;
-
+  height: 100vh;
 
   .backButtonContainer {
     display: flex;
     flex-direction: row-reverse;
     position: relative;
     right: 38%;
+    margin-top: 20px;
 
     .backButton {
       font-size: 18px;
@@ -30,74 +31,80 @@
     display: flex;
     background-color: $white;
     box-shadow: 4px 4px 9px -4px rgba($black, 1);
-    margin-top: 20px;
+    position: relative;
     padding: 30px;
     width: 65%;
+
+    .bookImageContainer {
+      display: flex;
+      position: relative;
+      justify-content: flex-end;
+
+      &::after {
+        content: '';
+        background: url('./resources/img/badge.png');
+        background-size: cover;
+        height: 80px;
+        position: absolute; 
+        transform: rotate(20deg);
+        width: 55px;
+      }
+    }
 
     .bookImage {
       height: 385px;
       position: relative;
       width: 250px;
-      margin-right: 30px;
+      margin-right: 20px;
     }
 
-    &::after {
-      content: '';
-      background: url('./resources/img/badge.png');
-      background-size: cover;
-      height: 80px;
-      left: 33.5%;
-      position: absolute;
-      transform: rotate(20deg);
-      width: 55px;
-    }
+    .textContainer{
+      margin-left: 15px;
 
-    .mainTitle {
-      @include bookDetailfontStyle();
-      border-bottom: 4px solid $conifer;
-      font-size: 32px;
-      line-height: 38px;
-      margin-bottom: 32px;
-      padding-bottom: 10px;
-    }
+      .mainTitle {
+        @include bookDetailfontStyle();
+        border-bottom: 4px solid $conifer;
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 32px;
+        padding-bottom: 10px;
+      }
+  
+      .title {
+        @include bookDetailfontStyle();
+        font-size: 20px;
+        margin-bottom: 30px;
+        line-height: 24px;
+      }
+  
+      .bookGenre {
+        color: $mediumGray;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+      }
+  
+      .bookDetail {
+        color: $mediumGray;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 24px;
+      }
 
-    .title {
-      @include bookDetailfontStyle();
-      font-size: 20px;
-      margin-bottom: 30px;
-      line-height: 24px;
-    }
-
-    .bookGenre {
-      color: $mediumGray;
-      font-family: Roboto;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 28px;
-    }
-
-    .bookDetail {
-      color: $mediumGray;
-      font-family: Roboto;
-      font-size: 20px;
-      line-height: 24px;
     }
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: $mobile) {
   .bookDetailBackground {
     flex-direction: column-reverse;
 
-    .backButtonContainer {
-      margin-top: 5px;
-      justify-content: center;
-      position: unset;
-    }
 
     .bookContainer {
       align-items: center;
       flex-direction: column;
+      margin-top: unset;
       padding: unset;
       width: 40%;
 
