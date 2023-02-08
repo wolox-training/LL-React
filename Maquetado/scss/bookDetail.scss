@@ -40,13 +40,13 @@ $mobile: 1024px;
       margin-right: 20px;
       position: relative;
       justify-content: flex-end;
-      
+
       &::after {
         content: '';
         background: url('./resources/img/badge.png');
         background-size: cover;
         height: 80px;
-        position: absolute; 
+        position: absolute;
         transform: rotate(20deg);
         width: 55px;
       }
@@ -58,7 +58,7 @@ $mobile: 1024px;
       width: 250px;
     }
 
-    .textContainer{
+    .textContainer {
       margin-left: 15px;
 
       .mainTitle {
@@ -69,14 +69,14 @@ $mobile: 1024px;
         margin-bottom: 32px;
         padding-bottom: 10px;
       }
-  
+
       .title {
         @include bookDetailfontStyle();
         font-size: 20px;
         margin-bottom: 30px;
         line-height: 24px;
       }
-  
+
       .bookGenre {
         color: $mediumGray;
         font-family: Roboto;
@@ -84,7 +84,7 @@ $mobile: 1024px;
         font-weight: 700;
         line-height: 28px;
       }
-  
+
       .bookDetail {
         color: $mediumGray;
         font-family: Roboto;
@@ -104,24 +104,34 @@ $mobile: 1024px;
     .backButtonContainer {
       position: unset;
     }
+
     .bookContainer {
-      align-items: center;
-      flex-direction: column;
-      margin-top: unset;
-      padding: unset;
-      justify-content: flex-end;
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-template-areas: 'bookImageContainer' 'textContainer';
+      padding: 10px;
+      position: relative;
       width: 40%;
-      padding-top: 20px;
+ 
+      .bookImageContainer {
+        display: grid;
+        grid-area: bookImageContainer;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        justify-content: center;
+        
+        .bookImage {
+          height: 350px;
+          width: 250px;
+        }
 
-      .bookImage {
-        margin: 25px unset 20px unset;
-        height: 350px;
-        width: 250px;
+        &::after {
+          left: 74%;
+          position: absolute;
+        }
       }
-
-      &::after {
-        margin-top: 15px;
-        left: 59%
+      .textContainer {
+        grid-area: textContainer;
       }
     }
   }

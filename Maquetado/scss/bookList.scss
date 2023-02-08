@@ -53,6 +53,10 @@
         width: 17%;
         transition: transform 0.2s;
 
+        &:hover{
+          transform: scale(1.1);
+        }
+
         .titleBook {
           color: $black;
           font-weight: 700;
@@ -63,10 +67,6 @@
         .authorBook {
           color: $mediumGray;
         }
-      }
-
-      .bookCard:hover{
-        transform: scale(1.1);
       }
     }
   }
