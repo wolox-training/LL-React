@@ -4,3 +4,20 @@
   align-items: $align;
   flex-direction: $direction;
 }
+
+@mixin bookDetailfontStyle {
+  color: $black;
+  display: block;
+  font-family: Roboto;
+  font-weight: 700;
+}
+
+@mixin flexBox {
+  align-items: center;
+  display: flex;
+  justify-content: center;  
+}
+@mixin buttonsStyle {
+  border-radius: 5px;
+  height: 12%;
+}

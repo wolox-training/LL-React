@@ -1,39 +1,78 @@
-.app {
-  text-align: center;
-}
+@import '../../../../scss/variables/colors';
+@import '../../../../scss/mixins.scss';
 
-.app-logo {
-  animation: app-logo-spin infinite 20s linear;
-  height: 30vmin;
-}
+.pageContainer {
+    @include flexBox();
 
-.app-header {
-  background-color: #282C34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+    .loginContainer {
+      align-items: center;
+      background-color: $seashell;
+      border-top: 10px solid $cerulean;
+      display: flex;
+      flex-direction: column;
+      height: 700px;
+      margin-top: 80px;
+      width: 400px;
 
-.text {
-  font-size: calc(10px + 2vmin);
-  margin-bottom: calc(30px + 2vmin);
-  color: #FFF;
-}
+      img {
+        margin-top: 10px;
+        height: 100px;
+        width: 300px;
+      }
 
-.app-link {
-  font-size: calc(10px + 2vmin);
-  color: #61DAFB;
-  text-decoration: underline;
-}
+      .inputsContainer {
+        display: flex;
+        flex-direction: column;
+        height: 77%;
+        margin-top: 25px;
+        width: 85%;
 
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
+        .dataTitle {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: $black
+        }
+
+        .dataInput {
+          @include buttonsStyle;
+          margin-bottom: 20px;
+          font-size: 20px;
+          padding-left: 20px; 
+          color: $black
+        }
+
+        .loginButton {
+          @include flexBox();
+          @include buttonsStyle;
+          background-color: $conifer;
+          margin-top: 10px;
+        }
+
+        .line {
+          background-color: $mediumGray;
+          margin-bottom: 10px;
+          margin-top: 20px;
+          height: 0.7%;
+        }
+
+        .signUpButton {
+          @include buttonsStyle;
+          @include flexBox();
+          border-color: $conifer;
+          border-style: solid;
+          border-width: 4px;
+          margin-top: 10px;
+        }
+
+        .loginTitle {
+          color: $white;
+          font-size: 20px;
+        }
+
+        .signUpTitle {
+          color: $conifer;
+          font-size: 20px;
+        }
+      }
+    }
   }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
