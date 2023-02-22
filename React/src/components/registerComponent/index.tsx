@@ -4,7 +4,6 @@ import { RegisterUser } from 'interfaces/RegisterUser';
 import { WoloxLogo } from 'components/WoloxLogo';
 
 import styles from './styles.module.scss';
-import { withContextProvider } from './context';
 
 export function Home() {
   const { register, handleSubmit } = useForm<RegisterUser>();
@@ -45,4 +44,4 @@ export function Home() {
   );
 }
 
-export default withContextProvider(Home);
+export default Home;
