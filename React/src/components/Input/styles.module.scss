@@ -1,0 +1,18 @@
+@import 'scss/variables/colors';
+@import 'src/scss/mixins.scss';
+
+        .dataTitle {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: $black
+        }
+
+        .dataInput {
+          @include buttonsStyle;
+          margin-bottom: 20px;
+          font-size: 20px;
+          padding-left: 20px; 
+          color: $black
+        }
+
+

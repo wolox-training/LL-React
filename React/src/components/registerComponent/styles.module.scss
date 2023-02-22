@@ -1,5 +1,5 @@
 @import 'scss/variables/colors';
-@import 'scss/mixins.scss';
+@import 'src/scss/mixins.scss';
 
 .pageContainer {
     @include flexBox();
@@ -46,6 +46,16 @@
           @include buttonsStyle;
           background-color: $conifer;
           margin-top: 10px;
+
+          &::after {
+            &::after {
+              background-color: $mediumGray;
+              background-size: cover;
+              margin-bottom: 10px;
+              margin-top: 20px;
+              height: 0.7%;
+            }
+          }
         }
 
         .line {
