@@ -1,25 +1,6 @@
 @import 'scss/variables/colors';
 @import 'scss/mixins.scss';
 
-.pageContainer {
-    @include flexBox();
-
-    .loginContainer {
-      align-items: center;
-      background-color: $seashell;
-      border-top: 10px solid $cerulean;
-      display: flex;
-      flex-direction: column;
-      height: 700px;
-      margin-top: 80px;
-      width: 400px;
-
-      img {
-        margin-top: 10px;
-        height: 100px;
-        width: 300px;
-      }
-
       .inputsContainer {
         display: flex;
         flex-direction: column;
@@ -48,13 +29,6 @@
           margin-top: 10px;
         }
 
-        .line {
-          background-color: $mediumGray;
-          margin-bottom: 10px;
-          margin-top: 20px;
-          height: 0.7%;
-        }
-
         .signUpButton {
           @include buttonsStyle;
           @include flexBox();
@@ -74,5 +48,4 @@
           font-size: 20px;
         }
       }
-    }
-  }
+

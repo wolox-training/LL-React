@@ -1,17 +1,15 @@
 import { useForm } from 'react-hook-form';
 
 import { RegisterUser } from 'interfaces/RegisterUser';
-import { WoloxLogo } from 'components/WoloxLogo';
 
 import styles from './styles.module.scss';
 
-export function Home() {
+export function FormControl() {
   const { register, handleSubmit } = useForm<RegisterUser>();
 
   return (
     <div className={styles.pageContainer}>
       <div className={styles.loginContainer}>
-        <WoloxLogo />
         <form
           onSubmit={handleSubmit((data) => console.log({ users: data }))}
           className={styles.inputsContainer}
@@ -44,4 +42,4 @@ export function Home() {
   );
 }
 
-export default Home;
+export default FormControl;
