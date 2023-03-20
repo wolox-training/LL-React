@@ -4,7 +4,7 @@
 .pageContainer {
   @include flexBox();
 
-  .loginContainer {
+  .authContainer {
     align-items: center;
     background-color: $seashell;
     border-top: 10px solid $cerulean;

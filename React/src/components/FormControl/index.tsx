@@ -9,32 +9,34 @@ export function FormControl() {
 
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.loginContainer}>
+      <div className={styles.authContainer}>
         <form
-          onSubmit={handleSubmit((data) => console.log({ users: data }))}
+          onSubmit={handleSubmit((data) => {
+            console.log({ user: data });
+          })}
           className={styles.inputsContainer}
         >
-          <h2 className={styles.dataTitle}>Nombre</h2>
+          <label className={styles.dataTitle}>Nombre</label>
           <input {...register('name')} className={styles.dataInput} type="text" />
 
-          <h2 className={styles.dataTitle}>Apellido</h2>
+          <label className={styles.dataTitle}>Apellido</label>
           <input {...register('lastName')} className={styles.dataInput} type="text" />
 
-          <h2 className={styles.dataTitle}>Email</h2>
+          <label className={styles.dataTitle}>Email</label>
           <input {...register('email')} className={styles.dataInput} type="email" />
 
-          <h2 className={styles.dataTitle}>Password</h2>
+          <label className={styles.dataTitle}>Password</label>
           <input {...register('password')} className={styles.dataInput} type="password" />
 
-          <h2 className={styles.dataTitle}>Confirmación De Password</h2>
+          <label className={styles.dataTitle}>Confirmación De Password</label>
           <input {...register('passwordConfirmation')} className={styles.dataInput} type="password" />
 
           <button type="submit" className={styles.loginButton}>
-            <h4 className={styles.loginTitle}>Login</h4>
+            Login
           </button>
           <div className={styles.line} />
           <button type="submit" className={styles.signUpButton}>
-            <h4 className={styles.signUpTitle}>Sign up</h4>
+            Sign up
           </button>
         </form>
       </div>

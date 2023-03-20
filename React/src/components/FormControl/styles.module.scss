@@ -1,22 +1,16 @@
 @import 'scss/variables/colors';
-@import 'src/scss/mixins.scss';
+@import 'scss/mixins';
 
 .pageContainer {
     @include flexBox();
 
-    .loginContainer {
+    .authContainer {
       align-items: center;
       background-color: $seashell;
       display: flex;
       flex-direction: column;
       height: 700px;
       width: 400px;
-
-      img {
-        margin-top: 10px;
-        height: 100px;
-        width: 300px;
-      }
 
       .inputsContainer {
         display: flex;
@@ -43,8 +37,9 @@
           @include flexBox();
           @include buttonsStyle;
           background-color: $conifer;
+          color: $white;
+          font-size: 20px;
           position: relative;
-
 
           &::after {
               content: '';
@@ -63,17 +58,9 @@
           border-color: $conifer;
           border-style: solid;
           border-width: 4px;
-          margin-top: 50px;
-        }
-
-        .loginTitle {
-          color: $white;
-          font-size: 20px;
-        }
-
-        .signUpTitle {
           color: $conifer;
           font-size: 20px;
+          margin-top: 50px;              
         }
       }
     }
