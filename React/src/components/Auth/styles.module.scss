@@ -1,0 +1,23 @@
+@import 'variables/colors';
+@import 'mixins.scss';
+
+.pageContainer {
+  @include flexBox();
+
+  .authContainer {
+    align-items: center;
+    background-color: $seashell;
+    border-top: 10px solid $cerulean;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    margin-top: 80px;
+    width: 400px;
+
+    .woloxLogo {
+      margin-top: 10px;
+      height: 100px;
+      width: 300px;
+    }
+  }
+}
