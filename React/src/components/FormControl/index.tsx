@@ -4,7 +4,7 @@ import { RegisterUser } from 'interfaces/RegisterUser';
 
 import styles from './styles.module.scss';
 
-export function FormControl() {
+export function RegisterForm() {
   const { register, handleSubmit } = useForm<RegisterUser>();
 
   return (
@@ -44,4 +44,4 @@ export function FormControl() {
   );
 }
 
-export default FormControl;
+export default RegisterForm;

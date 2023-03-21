@@ -1,10 +1,10 @@
 import { AuthContainer } from 'components/Auth';
-import { FormControl } from 'components/FormControl';
+import { RegisterForm } from 'components/FormControl';
 
 function HomeScreen() {
   return (
     <AuthContainer>
-      <FormControl />
+      <RegisterForm />
     </AuthContainer>
   );
 }
