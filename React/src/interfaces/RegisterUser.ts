@@ -4,5 +4,5 @@ export interface RegisterUser {
   passwordConfirmation: string;
   name: string;
   lastName: string;
-  locale: 'string';
+  locale: string;
 }

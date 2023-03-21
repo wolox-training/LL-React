@@ -1,5 +1,5 @@
-@import 'scss/variables/colors';
-@import 'src/scss/mixins.scss';
+@import 'variables/colors';
+@import 'mixins.scss';
 
 .pageContainer {
   @include flexBox();
